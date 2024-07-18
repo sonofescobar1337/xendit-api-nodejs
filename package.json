@@ -1,0 +1,32 @@
+{
+  "name": "xendit-api",
+  "version": "1.0.0",
+  "description": "Private xendit payment api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonofescobar1337/xendit-api.git"
+  },
+  "keywords": [
+    "xenditapi",
+    "xendit",
+    "API",
+    "Nodejs",
+    "Express"
+  ],
+  "author": "sonofescobar1337",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sonofescobar1337/xendit-api/issues"
+  },
+  "homepage": "https://github.com/sonofescobar1337/xendit-api#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-fetch": "^2.6.0",
+    "mongose": "^0.0.2-security"
+  }
+}
