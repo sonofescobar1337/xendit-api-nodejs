@@ -18,10 +18,23 @@ async function craetepayment(apikey, rid, currency, amount, expires_at) {
             })
         });
 
-        const response = await url.json();
+        let response;
+        const contentType = url.headers.get('content-type');
+
+        if (contentType && contentType.includes('application/json')) {
+            response = await url.json();
+        } else {
+            response = await url.text();
+            throw new Error(response);
+        }
+
+        if (!url.ok) {
+            throw new Error(response.message || response);
+        }
+
         return { response };
     } catch (error) {
-        return { error };
+        return { error: error.message };
     }
 }
 
